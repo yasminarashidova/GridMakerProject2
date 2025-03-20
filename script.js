@@ -15,7 +15,17 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    const table = document.getElementById("grid");
+
+    if (numRows > 0) {
+        table.deleteRow(numRows - 1); 
+        numRows--;
+
+        // If there are no more rows, reset column count
+        if (numRows === 0) {
+            numCols = 0;
+        }
+    }
 }
 
 // Remove a column
