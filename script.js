@@ -10,17 +10,17 @@ function addR() {
 
 // Add a column
 function addC() {
-     const table = document.getElementById("grid");
+      const table = document.getElementById("grid");
 
-    if (numRows == 0) {
-        // if there are no rows yet create one row and one cell
+    // If there are no rows, create one row with one cell
+    if (numRows === 0) {
         const newRow = table.insertRow();
         const newCell = newRow.insertCell();
         newCell.onclick = colorCell;
         numRows = 1;
     } else {
-        // Add one column to each existing row
-        for (let i = 0; i < numRows; i++) {
+        // Add one new cell to each existing row
+        for (let i = 0; i < table.rows.length; i++) {
             const row = table.rows[i];
             const newCell = row.insertCell();
             newCell.onclick = colorCell;
