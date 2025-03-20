@@ -20,7 +20,24 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    const table = document.getElementById("grid");
+
+    if (numCols > 0) {
+        for (let i = 0; i < numRows; i++) {
+            const row = table.rows[i];
+            row.deleteCell(numCols - 1); 
+        }
+
+        numCols--;
+
+        // If all columns are gone, remove all rows too
+        if (numCols === 0) {
+            while (table.rows.length > 0) {
+                table.deleteRow(0);
+            }
+            numRows = 0;
+        }
+    }
 }
 
 // Set global variable for selected color
