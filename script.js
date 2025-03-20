@@ -26,7 +26,7 @@ function addR() {
 function addC() {
      const table = document.getElementById("grid");
 
-    if (numRows === 0) {
+    if (numRows == 0) {
         // if there are no rows yet create one row and one cell
         const newRow = table.insertRow();
         const newCell = newRow.insertCell();
