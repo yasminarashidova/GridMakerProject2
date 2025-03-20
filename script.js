@@ -9,14 +9,16 @@ function addR() {
     const table = document.getElementById("grid");
     const newRow = table.insertRow();
 
-    // If there are no columns yet, update number of columns
-    if (numCols === 0) {
-        numCols = 1;
+    for (let i = 0; i < numCols; i++) {
+        const newCell = newRow.insertCell();
+        newCell.onclick = colorCell;
     }
 
-    for (let i = 0; i < numCols; i++) { //for loop to add a new row cell in each column
-        const newCell = newRow.insertCell(); 
-        newCell.onclick = colorCell; // onclick
+    // If no columns exist yet, start with 1 column
+    if (numCols === 0) {
+        const newCell = newRow.insertCell();
+        newCell.onclick = colorCell;
+        numCols = 1;
     }
 
     numRows++;
