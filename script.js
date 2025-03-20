@@ -10,7 +10,21 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    const table = document.getElementById("grid");
+
+    // If there are no rows, create one first
+    if (numRows === 0) {
+        addR(); // This will also initialize numCols
+        return;
+    }
+
+    for (let i = 0; i < numRows; i++) {
+        const row = table.rows[i];
+        const newCell = row.insertCell();
+        newCell.onclick = colorCell; 
+    }
+
+    numCols++;
 }
 
 // Remove a row
