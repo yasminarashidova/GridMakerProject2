@@ -89,6 +89,13 @@ function selectColor(){
     console.log(colorSelected);
 }
 
+// Color cell with selected color
+function colorCell(event) {
+    if (colorSelected) {
+        event.target.style.backgroundColor = colorSelected;
+    }
+}
+
 // Fill all uncolored cells
 function fillU(){
     alert("Clicked Fill All Uncolored"); // Replace this line with your code.
