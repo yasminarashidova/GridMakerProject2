@@ -26,21 +26,18 @@ function addR() {
 
 // Add a column
 function addC() {
-      const table = document.getElementById("grid");
+    const table = document.getElementById("grid");
 
-    // If there are no rows, create one row with one cell
+    // If there are no rows, create one first
     if (numRows === 0) {
-        const newRow = table.insertRow();
-        const newCell = newRow.insertCell();
-        newCell.onclick = colorCell;
-        numRows = 1;
-    } else {
-        // Add one new cell to each existing row
-        for (let i = 0; i < table.rows.length; i++) {
-            const row = table.rows[i];
-            const newCell = row.insertCell();
-            newCell.onclick = colorCell;
-        }
+        addR(); // This will also initialize numCols
+        return;
+    }
+
+    for (let i = 0; i < numRows; i++) {
+        const row = table.rows[i];
+        const newCell = row.insertCell(); // insertCell()
+        newCell.onclick = colorCell; // onclick
     }
 
     numCols++;
