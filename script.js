@@ -102,3 +102,12 @@ function fillU() {
         }
     }
 }
+
+// Clear all cells
+function clearAll() {
+    const cells = document.getElementsByTagName("td");
+    for (let cell of cells) {
+        cell.style.backgroundColor = "";
+    }
+}
+
