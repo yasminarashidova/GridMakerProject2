@@ -102,23 +102,3 @@ function fillU() {
         }
     }
 }
-
-// Fill all cells
-function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
-}
-
-// Clear all cells
-function clearAll() {
-    const cells = document.getElementsByTagName("td");
-    for (let cell of cells) {
-        cell.style.backgroundColor = "";
-    }
-
-function fillAll() {
-    const cells = document.getElementsByTagName("td");
-    for (let cell of cells) {
-        cell.style.backgroundColor = colorSelected;
-    }
-
-
