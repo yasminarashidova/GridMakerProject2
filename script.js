@@ -103,11 +103,18 @@ function fillU() {
     }
 }
 
-// Clear all cells
+function fillAll() {
+    const cells = document.getElementsByTagName("td");
+
+    for (let cell of cells) {
+        cell.style.backgroundColor = colorSelected;
+    }
+}
+
 function clearAll() {
     const cells = document.getElementsByTagName("td");
+
     for (let cell of cells) {
         cell.style.backgroundColor = "";
     }
 }
-
