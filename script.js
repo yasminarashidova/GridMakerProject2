@@ -103,7 +103,6 @@ function fillU() {
     }
 }
 
-
 // Clear all cells
 function clearAll() {
     const cells = document.getElementsByTagName("td");
@@ -111,6 +110,4 @@ function clearAll() {
         cell.style.backgroundColor = "";
     }
 }
-
-
 
