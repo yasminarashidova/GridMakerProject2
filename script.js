@@ -103,8 +103,6 @@ function fillU() {
     }
 }
 
-
-// Clear all cells
 function fillAll() {
     const cells = document.getElementsByTagName("td");
 
@@ -113,7 +111,10 @@ function fillAll() {
     }
 }
 
-function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+function clearAll() {
+    const cells = document.getElementsByTagName("td");
 
+    for (let cell of cells) {
+        cell.style.backgroundColor = "";
+    }
 }
